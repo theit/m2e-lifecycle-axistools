@@ -12,7 +12,7 @@
 			</pluginExecutionFilter>
 			<action>
 				<configurator>
-					<id>org.eclipse.m2e.axistools.CodeGenProjectConfigurator</id>
+					<id>de.theit.m2e.axistools.CodeGenProjectConfigurator</id>
 				</configurator>
 			</action>
 		</pluginExecution>

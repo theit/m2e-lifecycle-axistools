@@ -9,8 +9,8 @@
 		<version>0.14.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>org.eclipse.m2e.axistools.feature</artifactId>
-	<packaging>eclipse-feature</packaging>
+	<artifactId>de.theit.m2e.axistools</artifactId>
+	<packaging>eclipse-plugin</packaging>
 
-	<name>m2e connector for Axistools code generator feature</name>
+	<name>m2e connector for axistools code generator</name>
 </project>

@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.m2e.core.projectConfigurators">
       <configurator
-            class="org.eclipse.m2e.axistools.internal.AxistoolsCodeGenProjectConfigurator"
-            id="org.eclipse.m2e.axistools.CodeGenProjectConfigurator"
+            class="de.theit.m2e.axistools.internal.AxistoolsCodeGenProjectConfigurator"
+            id="de.theit.m2e.axistools.CodeGenProjectConfigurator"
             name="Axistools codegen Project Configurator">
       </configurator>
    </extension>
