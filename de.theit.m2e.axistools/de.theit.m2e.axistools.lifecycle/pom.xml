@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.sonatype.m2e.extras</groupId>
-		<artifactId>m2eclipse-extras</artifactId>
-		<version>0.14.0-SNAPSHOT</version>
+		<groupId>de.theit.m2e</groupId>
+		<artifactId>axistools</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>de.theit.m2e.axistools</artifactId>
+	<artifactId>de.theit.m2e.axistools.lifecycle</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
-	<name>m2e connector for axistools code generator</name>
+	<name>M2E lifecycle configuration for the Axistools Maven plugin</name>
 </project>
