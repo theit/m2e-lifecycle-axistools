@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>de.theit.m2e</groupId>
 		<artifactId>axistools</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>de.theit.m2e.axistools.site</artifactId>
