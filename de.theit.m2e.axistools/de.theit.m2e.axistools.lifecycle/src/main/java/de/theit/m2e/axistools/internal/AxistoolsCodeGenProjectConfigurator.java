@@ -27,32 +27,31 @@ import org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator;
  * @version $Id$
  */
 public class AxistoolsCodeGenProjectConfigurator extends
-		AbstractJavaProjectConfigurator {
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.eclipse.m2e.core.project.configurator.AbstractProjectConfigurator#getBuildParticipant(org.eclipse.m2e.core.project.IMavenProjectFacade,
-	 *      org.apache.maven.plugin.MojoExecution,
-	 *      org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata)
-	 */
-	@SuppressWarnings("unused")
-	@Override
-	public AbstractBuildParticipant getBuildParticipant(
-			IMavenProjectFacade projectFacade, MojoExecution execution,
-			IPluginExecutionMetadata executionMetadata) {
-		return new AxistoolsCodeGenBuildParticipant(execution);
-	}
+        AbstractJavaProjectConfigurator {
+    /**
+     * {@inheritDoc}
+     * 
+     * @see org.eclipse.m2e.core.project.configurator.AbstractProjectConfigurator#getBuildParticipant(org.eclipse.m2e.core.project.IMavenProjectFacade,
+     *      org.apache.maven.plugin.MojoExecution,
+     *      org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata)
+     */
+    @Override
+    public AbstractBuildParticipant getBuildParticipant(
+            IMavenProjectFacade projectFacade, MojoExecution execution,
+            IPluginExecutionMetadata executionMetadata) {
+        return new AxistoolsCodeGenBuildParticipant(execution);
+    }
 
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator#getSourceFolders(org.eclipse.m2e.core.project.configurator.ProjectConfigurationRequest,
-	 *      org.apache.maven.plugin.MojoExecution)
-	 */
-	@Override
-	protected File[] getSourceFolders(ProjectConfigurationRequest request,
-			MojoExecution mojoExecution) throws CoreException {
-		return getParameterValue("outputDirectory", File[].class,
-				request.getMavenSession(), mojoExecution);
-	}
+    /**
+     * {@inheritDoc}
+     * 
+     * @see org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator#getSourceFolders(org.eclipse.m2e.core.project.configurator.ProjectConfigurationRequest,
+     *      org.apache.maven.plugin.MojoExecution)
+     */
+    @Override
+    protected File[] getSourceFolders(ProjectConfigurationRequest request,
+            MojoExecution mojoExecution) throws CoreException {
+        return getParameterValue("outputDirectory", File[].class,
+                request.getMavenSession(), mojoExecution);
+    }
 }

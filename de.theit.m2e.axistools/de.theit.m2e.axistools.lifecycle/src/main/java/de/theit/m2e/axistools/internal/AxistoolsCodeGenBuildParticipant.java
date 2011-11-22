@@ -28,39 +28,39 @@ import org.sonatype.plexus.build.incremental.BuildContext;
  * @version $Id$
  */
 public class AxistoolsCodeGenBuildParticipant extends
-		MojoExecutionBuildParticipant {
-	/**
-	 * Creates a new instance of this class.
-	 * 
-	 * @param execution
-	 *            Mojo execution.
-	 */
-	public AxistoolsCodeGenBuildParticipant(MojoExecution execution) {
-		super(execution, true);
-	}
+        MojoExecutionBuildParticipant {
+    /**
+     * Creates a new instance of this class.
+     * 
+     * @param execution
+     *            Mojo execution.
+     */
+    public AxistoolsCodeGenBuildParticipant(MojoExecution execution) {
+        super(execution, true);
+    }
 
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.eclipse.m2e.core.project.configurator.MojoExecutionBuildParticipant#build(int,
-	 *      org.eclipse.core.runtime.IProgressMonitor)
-	 */
-	@Override
-	public Set<IProject> build(int kind, IProgressMonitor monitor)
-			throws Exception {
-		IMaven maven = MavenPlugin.getMaven();
-		BuildContext buildContext = getBuildContext();
+    /**
+     * {@inheritDoc}
+     * 
+     * @see org.eclipse.m2e.core.project.configurator.MojoExecutionBuildParticipant#build(int,
+     *      org.eclipse.core.runtime.IProgressMonitor)
+     */
+    @Override
+    public Set<IProject> build(int kind, IProgressMonitor monitor)
+            throws Exception {
+        IMaven maven = MavenPlugin.getMaven();
+        BuildContext buildContext = getBuildContext();
 
-		// execute mojo
-		Set<IProject> result = super.build(kind, monitor);
+        // execute mojo
+        Set<IProject> result = super.build(kind, monitor);
 
-		// tell m2e builder to refresh generated files
-		File generated = maven.getMojoParameterValue(getSession(),
-				getMojoExecution(), "outputDirectory", File.class);
-		if (null != generated) {
-			buildContext.refresh(generated);
-		}
+        // tell m2e builder to refresh generated files
+        File generated = maven.getMojoParameterValue(getSession(),
+                getMojoExecution(), "outputDirectory", File.class);
+        if (null != generated) {
+            buildContext.refresh(generated);
+        }
 
-		return result;
-	}
+        return result;
+    }
 }

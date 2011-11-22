@@ -2,7 +2,7 @@
 <feature
       id="de.theit.m2e.axistools.feature"
       label="M2E lifecycle configuration for the Axistools Maven plugin"
-      version="1.0.0.qualifier"
+      version="1.1.0.qualifier"
       plugin="de.theit.m2e.axistools">
 
    <description>
@@ -201,7 +201,7 @@ org.codehaus.mojo:axistools-maven-plugin
          id="de.theit.m2e.axistools"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.1.0.qualifier"
          unpack="false"/>
 
 </feature>
