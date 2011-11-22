@@ -3,7 +3,7 @@
    <description url="http://theit.github.com/m2e-lifecycle-axistools/site">
       M2E lifecycle configuration for the Axistools Maven plugin
    </description>
-   <feature url="features/de.theit.m2e.axistools.feature_1.0.0.201107010810.jar" id="de.theit.m2e.axistools.feature" version="1.0.0.201107010810">
+   <feature url="features/de.theit.m2e.axistools.feature_1.1.0.201111221420.jar" id="de.theit.m2e.axistools.feature" version="1.1.0.201111221420">
       <category name="de.theit.m2e.axistools"/>
    </feature>
    <category-def name="de.theit.m2e.axistools" label="M2E lifecycle configuration for the Axistools Maven plugin"/>
