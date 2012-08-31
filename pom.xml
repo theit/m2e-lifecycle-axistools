@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.theit.m2e</groupId>
+    <artifactId>axistools-parent</artifactId>
+    <version>1.1.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>de.theit.m2e.axistools parent</name>
+    <description>This project contains the m2e connector for org.codehaus.mojo:axistools-maven-plugin that generates Java source code from WSDL sources.</description>
+
+    <inceptionYear>2011</inceptionYear>
+
+    <developers>
+        <developer>
+            <id>theit</id>
+            <name>Thorsten Heit / H2841</name>
+            <email>theit@gmx.de</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <tycho-version>0.15.0</tycho-version>
+    </properties>
+
+    <prerequisites>
+        <maven>3.0</maven>
+    </prerequisites>
+
+
+
+    <modules>
+        <module>de.theit.m2e.axistools</module>
+        <module>tests</module>
+    </modules>
+</project>
