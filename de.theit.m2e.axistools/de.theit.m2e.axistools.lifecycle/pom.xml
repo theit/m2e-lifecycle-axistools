@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>de.theit.m2e</groupId>
-		<artifactId>axistools</artifactId>
-		<version>1.1.1-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>de.theit.m2e</groupId>
+        <artifactId>axistools</artifactId>
+        <version>1.1.1-SNAPSHOT</version>
+    </parent>
 
-	<artifactId>de.theit.m2e.axistools</artifactId>
-	<packaging>eclipse-plugin</packaging>
+    <artifactId>de.theit.m2e.axistools</artifactId>
+    <packaging>eclipse-plugin</packaging>
 
-	<name>M2E lifecycle configuration for the Axistools Maven plugin</name>
+    <name>m2e connector for org.codehaus.mojo:axistools-maven-plugin - plugin code</name>
 </project>

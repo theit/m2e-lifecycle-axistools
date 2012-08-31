@@ -10,7 +10,7 @@
       <id>org.eclipse.m2e.discovery.lifecycles.de.theit.m2e.axistools</id>
       <kind>lifecycles</kind>
       <license>ASL</license>
-      <name>Axis Tools m2e</name>
+      <name>m2e connector for org.codehaus.mojo:axistools-maven-plugin</name>
       <provider>Thorsten Heit</provider>
       <p2>
         <repositoryUrl>http://theit.github.com/m2e-lifecycle-axistools</repositoryUrl>
@@ -21,7 +21,7 @@
         </lifecycleMappingIU>
       </p2>
       <overview>
-        <summary>m2e support for the axistools-maven-plugin.</summary>
+        <summary>m2e support for org.codehaus.mojo:axistools-maven-plugin.</summary>
         <url>https://github.com/theit/m2e-lifecycle-axistools</url>
       </overview>
     </catalogItem>
