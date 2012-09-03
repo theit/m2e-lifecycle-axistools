@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.theit.m2e</groupId>
-    <artifactId>axistools</artifactId>
-    <version>1.1.2-SNAPSHOT</version>
+    <artifactId>axistools-eclipse-plugin-main</artifactId>
     <packaging>pom</packaging>
 
     <name>de.theit.m2e.axistools</name>
     <description>This project contains the m2e connector for org.codehaus.mojo:axistools-maven-plugin that generates Java source code from WSDL sources.</description>
 
     <inceptionYear>2011</inceptionYear>
+
+
+
+    <parent>
+        <groupId>de.theit.m2e</groupId>
+        <artifactId>axistools-eclipse-plugin-parent</artifactId>
+        <version>1.1.2-SNAPSHOT</version>
+    </parent>
+
+
 
     <developers>
         <developer>
@@ -24,7 +33,6 @@
 
 
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -34,14 +42,6 @@
     <prerequisites>
         <maven>3.0</maven>
     </prerequisites>
-
-
-
-    <scm>
-        <connection>scm:git:git://github.com/theit/m2e-lifecycle-axistools.git</connection>
-        <url>https://github.com/theit/m2e-lifecycle-axistools</url>
-        <developerConnection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</developerConnection>
-    </scm>
 
 
 

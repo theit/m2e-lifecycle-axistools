@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>de.theit.m2e</groupId>
-        <artifactId>axistools</artifactId>
+        <artifactId>axistools-eclipse-plugin-main</artifactId>
         <version>1.1.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>de.theit.m2e.axistools.site</artifactId>
     <packaging>eclipse-update-site</packaging>
     <name>m2e connector for org.codehaus.mojo:axistools-maven-plugin - Eclipse Update Site</name>
+
+
+
+    <distributionManagement>
+        <site>
+            <!-- see http://khuxtable.github.com/wagon-gitsite/usage.html -->
+            <id>github</id>
+            <name>GitHub project site</name>
+            <url>gitsite:https://github.com/theit/m2e-lifecycle-axistools.git</url>
+        </site>
+    </distributionManagement>
+
+
 
     <build>
         <plugins>
@@ -49,37 +63,8 @@
             <extension>
                 <groupId>org.kathrynhuxtable.maven.wagon</groupId>
                 <artifactId>wagon-gitsite</artifactId>
-                <version>0.2</version>
+                <version>0.3.1</version>
             </extension>
         </extensions>
     </build>
-
-    <profiles>
-        <profile>
-            <id>publish-site</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>maven-upload-plugin</artifactId>
-                        <version>0.0.1</version>
-                        <executions>
-                            <execution>
-                                <id>publish-site</id>
-                                <phase>install</phase>
-                                <goals>
-                                    <goal>upload-file</goal>
-                                </goals>
-                                <configuration>
-                                    <file>${project.build.directory}/site</file>
-                                    <repositoryUrl>gitsite:git@github.com/theit/m2e-lifecycle-axistools.git</repositoryUrl>
-                                    <repositoryPath>update-site/${unqualifiedVersion}/S/${unqualifiedVersion}.${buildQualifier}</repositoryPath>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

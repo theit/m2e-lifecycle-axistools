@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.theit.m2e</groupId>
-    <artifactId>axistools-parent</artifactId>
+    <artifactId>axistools-eclipse-plugin-parent</artifactId>
     <version>1.1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>de.theit.m2e.axistools parent</name>
-    <description>This project contains the m2e connector for org.codehaus.mojo:axistools-maven-plugin that generates Java source code from WSDL sources.</description>
+    <description>Parent project for the m2e connector for org.codehaus.mojo:axistools-maven-plugin</description>
 
     <inceptionYear>2011</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
@@ -24,12 +33,14 @@
 
 
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <tycho-version>0.15.0</tycho-version>
     </properties>
+
+
+
+    <!-- Use Maven 3 to build this project -->
 
     <prerequisites>
         <maven>3.0</maven>
@@ -37,8 +48,16 @@
 
 
 
+    <scm>
+        <connection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</connection>
+        <developerConnection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</developerConnection>
+        <url>https://github.com/theit/m2e-lifecycle-axistools</url>
+    </scm>
+
+
+
     <modules>
-        <module>de.theit.m2e.axistools</module>
+        <module>axistools-eclipse-plugin-main</module>
         <module>tests</module>
     </modules>
 </project>
