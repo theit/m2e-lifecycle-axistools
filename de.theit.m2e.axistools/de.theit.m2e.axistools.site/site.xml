@@ -3,7 +3,7 @@
    <description url="http://theit.github.com/m2e-lifecycle-axistools/site">
       m2e connector for org.codehaus.mojo:axistools-maven-plugin
    </description>
-   <feature url="features/de.theit.m2e.axistools.feature_1.1.1.jar" id="de.theit.m2e.axistools.feature" version="1.1.1">
+   <feature url="features/de.theit.m2e.axistools.feature_1.1.2.jar" id="de.theit.m2e.axistools.feature" version="1.1.2">
       <category name="de.theit.m2e.axistools"/>
    </feature>
    <category-def name="de.theit.m2e.axistools" label="m2e connector for org.codehaus.mojo:axistools-maven-plugin"/>
