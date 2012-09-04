@@ -15,7 +15,7 @@
       <p2>
         <repositoryUrl>http://theit.github.com/m2e-lifecycle-axistools</repositoryUrl>
         <iuId>de.theit.m2e.axistools.feature.feature.group</iuId>
-        <iuVersion>1.1.0.201111221420</iuVersion>
+        <iuVersion>1.1.2.201209041055</iuVersion>
         <lifecycleMappingIU>
           <iuId>de.theit.m2e.axistools</iuId>
         </lifecycleMappingIU>
