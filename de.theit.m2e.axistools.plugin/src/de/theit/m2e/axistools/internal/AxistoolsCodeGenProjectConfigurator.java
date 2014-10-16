@@ -1,6 +1,6 @@
 /*
  * @(#)AxistoolsCodeGenProjectConfigurator.java
- * Copyright (C)2011-2012 Thorsten Heit
+ * Copyright (C)2011-2014 Thorsten Heit
  *
  * This file is licensed to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance with the License.
@@ -20,17 +20,16 @@ import org.apache.maven.plugin.MojoExecution;
 import org.eclipse.m2e.core.lifecyclemapping.model.IPluginExecutionMetadata;
 import org.eclipse.m2e.core.project.IMavenProjectFacade;
 import org.eclipse.m2e.core.project.configurator.AbstractBuildParticipant;
-import org.eclipse.m2e.jdt.AbstractJavaProjectConfigurator;
+import org.eclipse.m2e.jdt.AbstractSourcesGenerationProjectConfigurator;
 
 /**
  * Project configurator class for the Axistools code generator plugin.
  * 
  * @author <a href="mailto:theit@gmx.de">Thorsten Heit (theit@gmx.de)</a>
  * @since 28.06.2011 17:17:19
- * @version $Id$
  */
 public class AxistoolsCodeGenProjectConfigurator extends
-		AbstractJavaProjectConfigurator {
+		AbstractSourcesGenerationProjectConfigurator {
 	/**
 	 * {@inheritDoc}
 	 * 

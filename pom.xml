@@ -1,89 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>de.theit.m2e</groupId>
-    <artifactId>axistools-eclipse-plugin-parent</artifactId>
-    <version>1.1.2</version>
-    <packaging>pom</packaging>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.theit.m2e</groupId>
+	<artifactId>axistools-eclipse-plugin-parent</artifactId>
+	<version>1.2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <name>de.theit.m2e.axistools parent</name>
-    <description>Parent project for the m2e connector for org.codehaus.mojo:axistools-maven-plugin</description>
+	<name>m2e axistools :: parent</name>
+	<description>Parent project for the m2e connector for org.codehaus.mojo:axistools-maven-plugin</description>
 
-    <inceptionYear>2011</inceptionYear>
+	<inceptionYear>2011</inceptionYear>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-    <developers>
-        <developer>
-            <id>theit</id>
-            <name>Thorsten Heit / H2841</name>
-            <email>theit@gmx.de</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-    </developers>
-
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+	<developers>
+		<developer>
+			<id>theit</id>
+			<name>Thorsten Heit</name>
+			<email>theit@gmx.de</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
 
 
 
-    <!-- Use Maven 3 to build this project -->
+	<repositories>
+		<repository>
+			<id>rso</id>
+			<url>http://repository.sonatype.org/content/groups/sonatype-public-grid</url>
+		</repository>
 
-    <prerequisites>
-        <maven>3.0</maven>
-    </prerequisites>
+		<repository>
+			<id>kepler</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/kepler</url>
+		</repository>
+
+		<repository>
+			<id>m2e</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/technology/m2e/milestones/1.5</url>
+		</repository>
+
+		<repository>
+			<id>m2e-wtp</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/m2e-wtp/releases/kepler/1.0.0/</url>
+		</repository>
+	</repositories>
 
 
 
-    <scm>
-        <connection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</connection>
-        <developerConnection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</developerConnection>
-        <url>https://github.com/theit/m2e-lifecycle-axistools</url>
-    </scm>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<tycho-version>0.21.0</tycho-version>
+		<tycho-extras-version>${tycho-version}</tycho-extras-version>
+		<tycho.scmUrl>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</tycho.scmUrl>
+	</properties>
 
 
 
-    <modules>
-        <module>axistools-eclipse-plugin-main</module>
-        <module>tests</module>
-    </modules>
+	<!-- Use Maven 3 to build this project -->
+
+	<prerequisites>
+		<maven>3.0.5</maven>
+	</prerequisites>
 
 
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.5.1</version>
-                </plugin>
+	<scm>
+		<connection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</connection>
+		<developerConnection>scm:git:https://github.com/theit/m2e-lifecycle-axistools.git</developerConnection>
+		<url>https://github.com/theit/m2e-lifecycle-axistools</url>
+	</scm>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.3.2</version>
-                </plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.1</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+
+	<modules>
+		<module>de.theit.m2e.axistools.feature</module>
+		<module>de.theit.m2e.axistools.plugin</module>
+		<module>de.theit.m2e.axistools.site</module>
+		<module>de.theit.m2e.axistools.tests</module>
+	</modules>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<ignoreTychoRepositories>false</ignoreTychoRepositories>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.4</version>
+				</plugin>
+
+				<!-- important for self-hosting -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<sourceReferences>
+							<generate>true</generate>
+						</sourceReferences>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.eclipse.tycho.extras</groupId>
+							<artifactId>tycho-sourceref-jgit</artifactId>
+							<version>${tycho-extras-version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>

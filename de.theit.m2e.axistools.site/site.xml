@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="m2e axistools">
+      m2e connector for org.codehaus.mojo:axistools-maven-plugin
+   </description>
+   <category name="m2e-axistools"/>
+   <feature url="features/de.theit.m2e.axistools.feature_0.0.0.qualifier.jar" id="de.theit.m2e.axistools.feature" version="0.0.0">
+      <category name="m2e-axistools"/>
+   </feature>
+   <category-def name="m2e-axistools" label="m2e connector for org.codehaus.mojo:axistools-maven-plugin"/>
+</site>
