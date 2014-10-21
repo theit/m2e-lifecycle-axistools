@@ -19,7 +19,7 @@
    </license>
 
    <url>
-      <update label="Update Site at Github" url="http://theit.github.com/m2e-lifecycle-axistools/site"/>
+      <update label="Update Site at Github" url="http://theit.github.com/m2e-lifecycle-axistools"/>
    </url>
 
    <plugin
