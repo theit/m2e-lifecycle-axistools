@@ -13,7 +13,7 @@ Maven-enabled with m2e (right-click on project > Configure > Convert to Maven...
 
 To install this m2e connector, use the following P2 update site:
 
-http://theit.github.com/m2e-lifecycle-axistools
+https://theit.github.io/m2e-lifecycle-axistools
 
 
 ## License
